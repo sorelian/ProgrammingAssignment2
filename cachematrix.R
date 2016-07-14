@@ -27,9 +27,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Returns inverse of x object from makeCacheMatrix() either by computing it (solve) or returning the cache value if any
 cacheSolve <- function(x, ...) {
-    # 
+    # get cache value
     invm <- x$getinvm()
-    # does invm exist in the environment?
+    # does invm exist in the cache?
     if (is.null(invm)){
       # no, get matrix and compute the inverse
       mat <- x$getm()
